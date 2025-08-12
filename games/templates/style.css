@@ -1,0 +1,93 @@
+/* Grundlayout */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: rgba(245, 245, 245, 0.8);
+}
+
+/* Überschriften */
+.title {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding-bottom: 8px;
+}
+
+/* Label */
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Eingabefelder */
+.input-field {
+    width: 100%;
+    max-width: 280px;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+/* Button */
+.btn {
+    background-color: rgb(60, 120, 240);
+    color: white;
+    border: 1px solid rgb(30, 90, 210);
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(30, 90, 210);
+}
+
+/* Link als Button */
+.link-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid rgba(0,0,0,0.3);
+    background-color: transparent;
+    color: rgb(50, 50, 50);
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.link-btn:hover {
+    background-color: rgb(230, 230, 230);
+    color: black;
+}
+
+/* Box für einzelne Spiele */
+.game-box {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    background-color: rgba(250, 250, 250, 0.9);
+}
+
+/* Fehlermeldung */
+.error-msg {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Formulare */
+.form {
+    margin-bottom: 15px;
+}

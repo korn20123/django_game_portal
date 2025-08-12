@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Registrieren</title>
+</head>
+<body>
+    <h2>Registrieren</h2>
+    <form class="form" method="POST">
+        {% csrf_token %}
+        <label for="username">Benutzername:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Passwort:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="password2">Passwort bestätigen:</label><br>
+        <input type="password" id="password2" name="password2" required><br><br>
+
+        <button type="submit">Registrieren</button>
+    </form>
+
+    {% if error %}
+        <p class="error-msg">{{ error }}</p>
+    {% endif %}
+
+    <p>Schon registriert? <a class="link-btn" href="{% url 'login' %}">Hier einloggen</a></p>
+</body>
+</html>

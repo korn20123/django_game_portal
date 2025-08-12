@@ -1,0 +1,34 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Spielübersicht</title>
+</head>
+<body>
+    <h1>Alle Spiele</h1>
+    <div class ="container">
+        {% for game in games %}
+            <div class ="game-box">
+            <h2>{{ game.title }} - {{ game.price }} €</h1>
+            {% if game.last_played %}
+              zuletzt gespielt: {{game.last_played|date:"d.m.Y"}}
+              {% endif %}
+            <form class="btn" method = "POST" action={%url 'delete' game.id%}>
+            {% csrf_token %}
+            <button type="submit">löschen</button>
+            </form>
+            <form class="btn" method = "POST" action={%url 'play' game.id%}>
+            {% csrf_token %}
+            <button type="submit">erneut gespielt</button>
+            </form>
+            </div>
+        {% empty %}
+            Keine Spiele vorhanden.
+        {% endfor %}
+    </div>
+
+    <a class="link-btn" href="{% url 'add' %}">Neues Spiel hinzufügen</a>
+</body>
+</html>
